@@ -12,3 +12,8 @@ F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\DTO\bin\Debug\DTO.dll
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\DTO\bin\Debug\DTO.pdb
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\DTO\obj\Debug\DTO.dll
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\DTO\obj\Debug\DTO.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\DTO\bin\Debug\DTO.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\DTO\bin\Debug\DTO.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\DTO\obj\Debug\DTO.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\DTO\obj\Debug\DTO.pdb

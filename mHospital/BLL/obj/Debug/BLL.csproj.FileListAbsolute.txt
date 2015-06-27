@@ -33,3 +33,10 @@ F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\BLL\bin\Debug\DAL.pdb
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\BLL\obj\Debug\BLL.dll
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\BLL\obj\Debug\BLL.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\bin\Debug\BLL.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\bin\Debug\BLL.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\bin\Debug\DAL.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\bin\Debug\DAL.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\obj\Debug\BLL.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\obj\Debug\BLL.pdb
