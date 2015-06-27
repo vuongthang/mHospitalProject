@@ -1,0 +1,7 @@
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\bin\Debug\DAL.dll
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\bin\Debug\DAL.pdb
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\bin\Debug\Entity.dll
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\bin\Debug\Entity.pdb
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\obj\Debug\DAL.dll
+C:\Users\ElKing\Desktop\mHospitalProject\mHospital\DAL\obj\Debug\DAL.pdb

@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
+using BLL;
 
-namespace mHospital
-{
+namespace mHospital{
+    
     public partial class frmMHospital : DevComponents.DotNetBar.Office2007Form
     {
+        sqlHelper _mySqlHelper = new sqlHelper();
         public frmMHospital()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace mHospital
         {
             tabControl.Tabs.Clear();
             tabControl.Tabs.Add(tabTiepNhanBN);
+            LoadGrivBenhNhan();
         }
         
         // Method close
@@ -125,9 +129,27 @@ namespace mHospital
         }
 
         #region Tiep don benh nhan
+
+        private void LoadGrivBenhNhan()
+        {
+            grvBenhNhan.DataSource = BenhNhanBLL.GetBenhNhanList(_mySqlHelper._strCon);
+        }
         #endregion
 
-
+        private void btnTiepNhanBN_Click(object sender, EventArgs e)
+        {
+            var bn = new BenhNhan();
+            bn.MaBenhNhan = txtMaBN.Text.Trim();
+            bn.TenBenhNhan = txtTenBN.Text.Trim();
+            bn.CMND = txtCMND.Text.Trim();
+            bn.NgaySinh = dtNgaySinh.Text;
+            bn.DiaChi = txtDiaChi.Text.Trim();
+            bn.SDT = txtSDT.Text.Trim();
+            bn.MaPhongKham = txtMaPK.Text.Trim();
+           // bn.MaPhongKham = cmbMaPK.SelectedValue.ToString();
+            var succes = BenhNhanBLL.InsertNewBenhNhan(_mySqlHelper.StrCon, bn);
+            LoadGrivBenhNhan();
+        }
 
     }
 }

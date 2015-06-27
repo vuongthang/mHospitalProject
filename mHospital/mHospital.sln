@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "mHospital\GUI.csproj", "{28EC60D4-692C-412E-A7F1-486EEE8F521E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AA9AF033-7EAB-459E-BCF7-0DAA5CBC886F} = {AA9AF033-7EAB-459E-BCF7-0DAA5CBC886F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{9B2F58CB-9C5A-4F21-BB4B-533AB3728CF2}"
 EndProject
