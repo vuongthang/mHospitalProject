@@ -117,6 +117,13 @@ namespace mHospital
 
         #endregion
 
+        // Show form frmKetQuaCLS
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            frmKetQuaCLS fKQCLS = new frmKetQuaCLS();
+            fKQCLS.ShowDialog();
+        }
+
         #region Tiep don benh nhan
         #endregion
 

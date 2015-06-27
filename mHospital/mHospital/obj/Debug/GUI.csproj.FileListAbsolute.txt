@@ -83,3 +83,4 @@ F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\mHospital\obj\Debug\mHospital.frmMHos
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\mHospital\obj\Debug\mHospital.Properties.Resources.resources
 F:\SE\8.ThuctapCNTT\DuAnBenhVien\mHospital\mHospital\obj\Debug\GUI.csproj.GenerateResource.Cache
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\mHospital\bin\Debug\mHospital.exe.config
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\mHospital\bin\Debug\mHospital.exe.config
