@@ -88,6 +88,12 @@
     <Compile Include="frmKetQuaCLS.Designer.cs">
       <DependentUpon>frmKetQuaCLS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKhamBenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhamBenh.Designer.cs">
+      <DependentUpon>frmKhamBenh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <EmbeddedResource Include="frmKetQuaCLS.resx">
       <DependentUpon>frmKetQuaCLS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKhamBenh.resx">
+      <DependentUpon>frmKhamBenh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,20 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{ac994acd-baa4-42d5-881b-ffb66d2a397a}</Project>
-      <Name>BLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAO.csproj">
-      <Project>{65e33eb4-9840-4e0a-98ba-0d8e7ab2c296}</Project>
-      <Name>DAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{de1de0c9-dabd-4154-ad84-628423e5c54a}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dangnhap.png" />

@@ -28,15 +28,6 @@ namespace mHospital
             Application.Exit();
         }
 
-        // Sign out
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            frmLogin flogin = new frmLogin();
-            flogin.FormClosed += flogin_FormClosed;
-            this.Hide();
-            flogin.ShowDialog();
-        }
-
         // User manual
         private void btnHelp_Click(object sender, EventArgs e)
         {
@@ -49,6 +40,8 @@ namespace mHospital
             frmAbout fabout = new frmAbout();
             fabout.ShowDialog();
         }
+
+        #region Xu ly tab
 
         //kiem tra tab
         private bool KiemTraTenTabConTrol(string name)
@@ -122,6 +115,12 @@ namespace mHospital
             tabControl.Tabs.Remove(tabControl.SelectedTab);
         }
 
-        
+        #endregion
+
+        #region Tiep don benh nhan
+        #endregion
+
+
+
     }
 }
