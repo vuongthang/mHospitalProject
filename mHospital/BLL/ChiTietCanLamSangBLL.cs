@@ -35,5 +35,45 @@ namespace BLL
                 return true;
             return false;
         }
+
+        public DataTable ChiDinhCLSSelectByMaBN(string maBN)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.ChiDinhCLSSelectByMaBN(maBN);
+            return dt;
+        }
+
+        public DataTable ChiTietCanLamSangSelectAll()
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.ChiTietCanLamSangSelectAll();
+            return dt;
+        }
+
+        public DataTable CanLamSangSelectByFlag(string flag)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.CanLamSangSelectByFlag(flag);
+            return dt;
+        }
+
+        public DataTable CanLamSangSearch(string temp)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.CanLamSangSearch(temp);
+            return dt;
+        }
+
+        public DataTable CanLamSangCheckSearch(string temp, string stt)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.CanLamSangCheckSearch(temp, stt);
+            return dt;
+        }
     }
 }

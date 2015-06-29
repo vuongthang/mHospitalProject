@@ -15,7 +15,7 @@ namespace DAL
         public DataTable BenhNhanSelectAll()
         {
             SqlConnection conn = ConnectionDB.GetConnect();
-            try 
+            try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("BenhNhanSelectAll", conn);
@@ -25,7 +25,7 @@ namespace DAL
                 adap.Fill(dt);
                 return dt;
             }
-            catch 
+            catch
             {
                 return null;
                 throw;
@@ -39,7 +39,7 @@ namespace DAL
         public DataTable BenhNhanSelectByFlag()
         {
             SqlConnection conn = ConnectionDB.GetConnect();
-            try 
+            try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("BenhNhanSelectByFlag", conn);
@@ -49,7 +49,7 @@ namespace DAL
                 adap.Fill(dt);
                 return dt;
             }
-            catch 
+            catch
             {
                 return null;
                 throw;
@@ -197,6 +197,6 @@ namespace DAL
                 conn.Close();
             }
         }
-        
+
     }
 }

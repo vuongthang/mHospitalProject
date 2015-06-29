@@ -72,5 +72,129 @@ namespace DAL
             catch { return false; }
             return true;
         }
+
+        public DataTable ChiDinhCLSSelectByMaBN(string MaBN)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("ChiDinhCLSSelectByMaBN", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", MaBN));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable ChiTietCanLamSangSelectAll()
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("ChiTietCanLamSangSelectAll", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public DataTable CanLamSangSelectByFlag(string flag)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("CanLamSangSelectByFlag", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@TrangThai", flag));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable CanLamSangSearch(string temp)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("CanLamSangSearch", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@temp", temp));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable CanLamSangCheckSearch(string temp, string stt)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("CanLamSangCheckSearch", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@temp", temp));
+                cmd.Parameters.Add(new SqlParameter("@stt", stt));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

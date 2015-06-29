@@ -58,7 +58,7 @@ namespace BLL
             if (khDAL.KT_MaKhamBenh(MaKhamBenh))
                 return true;
             return false;
-            
+
         }
 
         public DataTable KhamBenhSelectByIdBN(string temp)

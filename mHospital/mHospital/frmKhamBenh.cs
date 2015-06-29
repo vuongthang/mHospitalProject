@@ -108,6 +108,8 @@ namespace mHospital
         private void btnChiDinhCLS_Click(object sender, EventArgs e)
         {
             string MaBN = lblMaBN.Text;
+            frmChiDinhCLS frm = new frmChiDinhCLS(MaBN);
+            frm.ShowDialog();
         }
     }
 }

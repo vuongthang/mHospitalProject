@@ -109,6 +109,51 @@ namespace mHospital
 
         #endregion
 
+        #region Cận Lâm Sàng
+
+        ChiTietCanLamSangBLL ctCLS = new ChiTietCanLamSangBLL();
+        void LoadGridCLS()
+        {
+            grvCLS.DataSource = ctCLS.ChiTietCanLamSangSelectAll();
+        }
+
+        private void rbChuaKham_CheckedChanged(object sender, EventArgs e)
+        {
+            grvCLS.DataSource = ctCLS.CanLamSangSelectByFlag("0");
+        }
+
+        private void rbDaKham_CheckedChanged(object sender, EventArgs e)
+        {
+            grvCLS.DataSource = ctCLS.CanLamSangSelectByFlag("1");
+        }
+
+        private void rbAll_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadGridCLS();
+        }
+
+        private void txtSearchCLS_TextChanged(object sender, EventArgs e)
+        {
+            string temp = txtSearchCLS.Text;
+            string stt = "";
+            if (rbAll.Checked)
+            {
+                grvCLS.DataSource = ctCLS.CanLamSangSearch(temp);
+            }
+            if (rbChuaKham.Checked)
+            {
+                stt = "0";
+                grvCLS.DataSource = ctCLS.CanLamSangCheckSearch(temp, stt);
+            }
+            if (rbDaKham.Checked)
+            {
+                stt = "1";
+                grvCLS.DataSource = ctCLS.CanLamSangCheckSearch(temp, stt);
+            }
+        }
+
+        #endregion
+
         #region Form Events
 
         public frmMHospital()
@@ -121,7 +166,7 @@ namespace mHospital
             //tabControl.Tabs.Add(tabTiepNhanBN);
             //dgvBenhNhan.DataSource = bn.BenhNhanSelectAll();
         }
-        
+
         // Method close
         void flogin_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -129,13 +174,13 @@ namespace mHospital
         }
 
         // User manual
-        private void btnHelp_Click(object sender, EventArgs e)
+        private void btnHelp_Click_1(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("helpMHospital.chm");
         }
 
         // About for software
-        private void btnAbout_Click(object sender, EventArgs e)
+        private void btnAbout_Click_1(object sender, EventArgs e)
         {
             frmAbout fabout = new frmAbout();
             fabout.ShowDialog();
@@ -183,7 +228,7 @@ namespace mHospital
 
         private void btnCLS_Click(object sender, EventArgs e)
         {
-            //Todo - Load du lieu vao gridview
+            LoadGridCLS();
             if (KiemTraTenTabConTrol("tabCLS") == false)
             {
                 tabControl.Tabs.Add(tabCLS);
@@ -238,12 +283,6 @@ namespace mHospital
 
         #endregion
 
-
-
-
-
-
-
-
+        
     }
 }

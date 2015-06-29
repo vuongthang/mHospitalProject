@@ -29,32 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
-            this.grbInfoProject = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.likMTA = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.rtbInfoProject = new System.Windows.Forms.RichTextBox();
+            this.grbInfoProject = new System.Windows.Forms.GroupBox();
             this.grbInfoProject.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grbInfoProject
-            // 
-            this.grbInfoProject.Controls.Add(this.label3);
-            this.grbInfoProject.Controls.Add(this.likMTA);
-            this.grbInfoProject.Controls.Add(this.label2);
-            this.grbInfoProject.Controls.Add(this.label1);
-            this.grbInfoProject.Location = new System.Drawing.Point(12, 12);
-            this.grbInfoProject.Name = "grbInfoProject";
-            this.grbInfoProject.Size = new System.Drawing.Size(322, 92);
-            this.grbInfoProject.TabIndex = 4;
-            this.grbInfoProject.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 65);
+            this.label3.Location = new System.Drawing.Point(96, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 13);
             this.label3.TabIndex = 5;
@@ -63,7 +51,7 @@
             // likMTA
             // 
             this.likMTA.AutoSize = true;
-            this.likMTA.Location = new System.Drawing.Point(116, 38);
+            this.likMTA.Location = new System.Drawing.Point(149, 38);
             this.likMTA.Name = "likMTA";
             this.likMTA.Size = new System.Drawing.Size(102, 13);
             this.likMTA.TabIndex = 4;
@@ -73,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 39);
+            this.label2.Location = new System.Drawing.Point(96, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 3;
@@ -82,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 16);
+            this.label1.Location = new System.Drawing.Point(96, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 13);
             this.label1.TabIndex = 2;
@@ -108,6 +96,18 @@
             this.rtbInfoProject.Text = resources.GetString("rtbInfoProject.Text");
             this.rtbInfoProject.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
+            // grbInfoProject
+            // 
+            this.grbInfoProject.Controls.Add(this.label3);
+            this.grbInfoProject.Controls.Add(this.likMTA);
+            this.grbInfoProject.Controls.Add(this.label2);
+            this.grbInfoProject.Controls.Add(this.label1);
+            this.grbInfoProject.Location = new System.Drawing.Point(12, 12);
+            this.grbInfoProject.Name = "grbInfoProject";
+            this.grbInfoProject.Size = new System.Drawing.Size(322, 92);
+            this.grbInfoProject.TabIndex = 4;
+            this.grbInfoProject.TabStop = false;
+            // 
             // frmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,13 +130,13 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grbInfoProject;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel likMTA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.RichTextBox rtbInfoProject;
+        private System.Windows.Forms.GroupBox grbInfoProject;
 
     }
 }

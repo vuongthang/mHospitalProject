@@ -107,6 +107,7 @@ namespace mHospital
                 if (dt.DonThuocUpDate(NewDonThuoc()))
                 {
                     MessageBox.Show("Lưu thành công!");
+                    LoadGrid();
                 }
                 else
                 {
@@ -118,6 +119,7 @@ namespace mHospital
                 if (dt.DonThuocInsert(NewDonThuoc()))
                 {
                     MessageBox.Show("Lưu thành công!");
+                    LoadGrid();
                 }
                 else
                 {
