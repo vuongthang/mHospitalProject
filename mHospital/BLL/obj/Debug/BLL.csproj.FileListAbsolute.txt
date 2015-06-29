@@ -7,3 +7,12 @@ F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\bin\Debug\Entity.pdb
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\obj\Debug\BLL.dll
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\BLL\obj\Debug\BLL.pdb
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\bin\Debug\BLL.dll
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\bin\Debug\BLL.pdb
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\bin\Debug\DAL.dll
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\bin\Debug\Entity.dll
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\bin\Debug\DAL.pdb
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\bin\Debug\Entity.pdb
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\obj\Debug\BLL.dll
+D:\MyGithub\CodeQLBV\mHospitalProject\mHospital\BLL\obj\Debug\BLL.pdb

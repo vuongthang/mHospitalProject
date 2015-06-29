@@ -170,6 +170,7 @@ namespace mHospital
             }
         }
 
+
         private void btnKhamBenh_Click(object sender, EventArgs e)
         {
             LoadGridChuaKham();
@@ -211,6 +212,19 @@ namespace mHospital
             }
         }
 
+        private void btnAbout_Click_1(object sender, EventArgs e)
+        {
+            frmAbout fabout = new frmAbout();
+            fabout.ShowDialog();
+        }
+
+
+        private void btnHelp_Click_1(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("helpMHospital.chm");
+        }
+
+
         private void tabControl_TabItemClose(object sender, DevComponents.DotNetBar.TabStripActionEventArgs e)
         {
             //if (MessageBox.Show("Bạn có chắc chắn muốn đóng form?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No)
@@ -237,6 +251,13 @@ namespace mHospital
         }
 
         #endregion
+
+       
+
+
+
+
+
 
 
 

@@ -16,7 +16,7 @@ namespace mHospital
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChiDinhCLS());
+            Application.Run(new frmMHospital());
         }
     }
 }
