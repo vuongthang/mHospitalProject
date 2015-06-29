@@ -97,5 +97,17 @@ namespace mHospital
                 }
             }
         }
+
+        private void btnDonThuoc_Click(object sender, EventArgs e)
+        {
+            string MaBN = lblMaBN.Text;
+            frmDonThuoc frm = new frmDonThuoc(MaBN);
+            frm.ShowDialog();
+        }
+
+        private void btnChiDinhCLS_Click(object sender, EventArgs e)
+        {
+            string MaBN = lblMaBN.Text;
+        }
     }
 }

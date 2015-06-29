@@ -11,9 +11,11 @@ namespace mHospital
 {
     public partial class frmChiDinhCLS : DevComponents.DotNetBar.Office2007Form
     {
-        public frmChiDinhCLS()
+        string maBN;
+        public frmChiDinhCLS(string maBN)
         {
             InitializeComponent();
+            this.maBN = maBN;
         }
 
         private void frmChiDinhCLS_Load(object sender, EventArgs e)

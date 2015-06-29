@@ -105,3 +105,4 @@ F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\mHospital\bin\Debug\Entity.pdb
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\mHospital\bin\Debug\DAL.pdb
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\mHospital\obj\Debug\mHospital.exe
 F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\mHospital\obj\Debug\mHospital.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\mHospital\obj\Debug\mHospital.frmDonThuoc.resources

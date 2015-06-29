@@ -70,13 +70,13 @@ namespace DAL
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("KhamBenhInsert", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("MaKhamBenh", obj.MaKhamBenh));
-                cmd.Parameters.Add(new SqlParameter("TenBacSi", obj.TenBacSi));
-                cmd.Parameters.Add(new SqlParameter("MaBenhNhan", obj.MaBenhNhan));
-                cmd.Parameters.Add(new SqlParameter("TenNguoiNhapLieu", obj.TenNguoiNhapLieu));
-                cmd.Parameters.Add(new SqlParameter("ThoiGianKham", obj.ThoiGianKham));
+                cmd.Parameters.Add(new SqlParameter("@MaKhamBenh", obj.MaKhamBenh));
+                cmd.Parameters.Add(new SqlParameter("@TenBacSi", obj.TenBacSi));
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", obj.MaBenhNhan));
+                cmd.Parameters.Add(new SqlParameter("@TenNguoiNhapLieu", obj.TenNguoiNhapLieu));
+                cmd.Parameters.Add(new SqlParameter("@ThoiGianKham", obj.ThoiGianKham));
                 cmd.Parameters.Add(new SqlParameter("ChuanDoan", obj.ChuanDoan));
-                cmd.Parameters.Add(new SqlParameter("TrieuChung", obj.TrieuChung));
+                cmd.Parameters.Add(new SqlParameter("@TrieuChung", obj.TrieuChung));
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -92,13 +92,13 @@ namespace DAL
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("BenhNhanUpDate", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("MaKhamBenh", obj.MaKhamBenh));
-                cmd.Parameters.Add(new SqlParameter("TenBacSi", obj.TenBacSi));
-                cmd.Parameters.Add(new SqlParameter("MaBenhNhan", obj.MaBenhNhan));
-                cmd.Parameters.Add(new SqlParameter("TenNguoiNhapLieu", obj.TenNguoiNhapLieu));
-                cmd.Parameters.Add(new SqlParameter("ThoiGianKham", obj.ThoiGianKham));
-                cmd.Parameters.Add(new SqlParameter("ChuanDoan", obj.ChuanDoan));
-                cmd.Parameters.Add(new SqlParameter("TrieuChung", obj.TrieuChung));
+                cmd.Parameters.Add(new SqlParameter("@MaKhamBenh", obj.MaKhamBenh));
+                cmd.Parameters.Add(new SqlParameter("@TenBacSi", obj.TenBacSi));
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", obj.MaBenhNhan));
+                cmd.Parameters.Add(new SqlParameter("@TenNguoiNhapLieu", obj.TenNguoiNhapLieu));
+                cmd.Parameters.Add(new SqlParameter("@ThoiGianKham", obj.ThoiGianKham));
+                cmd.Parameters.Add(new SqlParameter("@ChuanDoan", obj.ChuanDoan));
+                cmd.Parameters.Add(new SqlParameter("@TrieuChung", obj.TrieuChung));
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }

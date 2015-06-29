@@ -48,10 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BenhNhanDAL.cs" />
+    <Compile Include="ChiTietCanLamSangDAL.cs" />
+    <Compile Include="ChiTietDonThuocDAL.cs" />
     <Compile Include="ConnectionDB.cs" />
+    <Compile Include="DonThuocDAL.cs" />
     <Compile Include="KhamBenhDAL.cs" />
     <Compile Include="PhongKhamDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThuocDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

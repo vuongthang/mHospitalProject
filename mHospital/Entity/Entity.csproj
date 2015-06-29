@@ -43,9 +43,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BenhNhanEntity.cs" />
+    <Compile Include="ChiTietCanLamSangEntites.cs" />
+    <Compile Include="ChiTietDonThuocEntities.cs" />
+    <Compile Include="DonThuocEntites.cs" />
     <Compile Include="KhamBenhEntity.cs" />
     <Compile Include="PhongKhamEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThuocEntities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

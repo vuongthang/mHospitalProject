@@ -84,6 +84,12 @@
     <Compile Include="frmDanhMucCLS.Designer.cs">
       <DependentUpon>frmDanhMucCLS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDonThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDonThuoc.Designer.cs">
+      <DependentUpon>frmDonThuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmKetQuaCLS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhMucCLS.resx">
       <DependentUpon>frmDanhMucCLS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDonThuoc.resx">
+      <DependentUpon>frmDonThuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmKetQuaCLS.resx">
       <DependentUpon>frmKetQuaCLS.cs</DependentUpon>
