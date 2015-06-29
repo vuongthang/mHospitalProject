@@ -1,4 +1,5 @@
-C:\Users\ElKing\Desktop\mHospitalProject\mHospital\Entity\bin\Debug\Entity.dll
-C:\Users\ElKing\Desktop\mHospitalProject\mHospital\Entity\bin\Debug\Entity.pdb
-C:\Users\ElKing\Desktop\mHospitalProject\mHospital\Entity\obj\Debug\Entity.dll
-C:\Users\ElKing\Desktop\mHospitalProject\mHospital\Entity\obj\Debug\Entity.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\Entity\bin\Debug\Entity.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\Entity\bin\Debug\Entity.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\Entity\obj\Debug\Entity.dll
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\Entity\obj\Debug\Entity.pdb
+F:\SE\8.ThuctapCNTT\mHospitalProject\mHospital\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache

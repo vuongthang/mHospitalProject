@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.grvChiDinhCLS = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.maCLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +54,11 @@
             this.btnEnd = new DevComponents.DotNetBar.ButtonX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.labelX11 = new DevComponents.DotNetBar.LabelX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.grvChiDinhCLS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput)).BeginInit();
             this.SuspendLayout();
@@ -67,39 +70,11 @@
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX1.Location = new System.Drawing.Point(204, 12);
+            this.labelX1.Location = new System.Drawing.Point(318, 12);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(275, 28);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "CHỈ ĐỊNH CẬN LÂM SÀNG";
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(168, 66);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(85, 22);
-            this.labelX2.TabIndex = 6;
-            this.labelX2.Text = "Tìm kiếm";
-            // 
-            // txtSearch
-            // 
-            // 
-            // 
-            // 
-            this.txtSearch.Border.Class = "TextBoxBorder";
-            this.txtSearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(259, 66);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(220, 22);
-            this.txtSearch.TabIndex = 5;
-            this.txtSearch.WatermarkText = "Nhập mã hoặc tên bệnh nhân";
             // 
             // grvChiDinhCLS
             // 
@@ -121,9 +96,9 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grvChiDinhCLS.DefaultCellStyle = dataGridViewCellStyle1;
             this.grvChiDinhCLS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.grvChiDinhCLS.Location = new System.Drawing.Point(43, 99);
+            this.grvChiDinhCLS.Location = new System.Drawing.Point(64, 165);
             this.grvChiDinhCLS.Name = "grvChiDinhCLS";
-            this.grvChiDinhCLS.Size = new System.Drawing.Size(643, 245);
+            this.grvChiDinhCLS.Size = new System.Drawing.Size(739, 176);
             this.grvChiDinhCLS.TabIndex = 4;
             // 
             // maCLS
@@ -177,11 +152,12 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(13, 377);
+            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX3.Location = new System.Drawing.Point(64, 62);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(75, 23);
+            this.labelX3.Size = new System.Drawing.Size(111, 23);
             this.labelX3.TabIndex = 8;
-            this.labelX3.Text = "Mã bệnh nhân";
+            this.labelX3.Text = "Bệnh Nhân: ";
             // 
             // txtMaBN
             // 
@@ -380,6 +356,73 @@
             this.textBoxX1.Size = new System.Drawing.Size(159, 20);
             this.textBoxX1.TabIndex = 9;
             // 
+            // labelX2
+            // 
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(181, 62);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(203, 23);
+            this.labelX2.TabIndex = 8;
+            this.labelX2.Text = "Mã bệnh nhân";
+            // 
+            // labelX9
+            // 
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX9.Location = new System.Drawing.Point(12, 380);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(76, 23);
+            this.labelX9.TabIndex = 8;
+            this.labelX9.Text = "Mã bệnh nhân";
+            // 
+            // labelX10
+            // 
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX10.Location = new System.Drawing.Point(402, 62);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(136, 23);
+            this.labelX10.TabIndex = 8;
+            this.labelX10.Text = "Mã bệnh nhân:";
+            // 
+            // labelX11
+            // 
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX11.ForeColor = System.Drawing.Color.Black;
+            this.labelX11.Location = new System.Drawing.Point(544, 62);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.Size = new System.Drawing.Size(203, 23);
+            this.labelX11.TabIndex = 8;
+            this.labelX11.Text = "Mã bệnh nhân";
+            // 
+            // labelX12
+            // 
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX12.Location = new System.Drawing.Point(64, 125);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(301, 34);
+            this.labelX12.TabIndex = 8;
+            this.labelX12.Text = "Thông tin cận lâm sàng";
+            // 
             // frmChiDinhCLS
             // 
             this.ClientSize = new System.Drawing.Size(868, 512);
@@ -394,13 +437,16 @@
             this.Controls.Add(this.labelX7);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.labelX6);
+            this.Controls.Add(this.labelX9);
+            this.Controls.Add(this.labelX11);
+            this.Controls.Add(this.labelX2);
+            this.Controls.Add(this.labelX10);
+            this.Controls.Add(this.labelX12);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grvChiDinhCLS);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
@@ -416,8 +462,6 @@
         #endregion
 
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtSearch;
         private DevComponents.DotNetBar.Controls.DataGridViewX grvChiDinhCLS;
         private DevComponents.DotNetBar.ButtonX btnAdd;
         private DevComponents.DotNetBar.LabelX labelX3;
@@ -442,5 +486,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenBS;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.LabelX labelX9;
+        private DevComponents.DotNetBar.LabelX labelX10;
+        private DevComponents.DotNetBar.LabelX labelX11;
+        private DevComponents.DotNetBar.LabelX labelX12;
     }
 }

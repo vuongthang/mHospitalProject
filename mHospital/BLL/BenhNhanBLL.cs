@@ -3,30 +3,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Entity;
-using DAL;
 using System.Data;
+using DAL;
+using Entity;
 
 namespace BLL
 {
     public class BenhNhanBLL
     {
-        public static DataTable GetBenhNhanList(string _strConnection)
+        public DataTable BenhNhanSelectAll()
         {
-            var ds = new DataTable();
-            var helper = new BenhNhanDAL();
-            ds = helper.fnGetBenhNhanList(_strConnection);
-            return ds;
+            var bnDAL = new BenhNhanDAL();
+            var dt = new DataTable();
+            dt = bnDAL.BenhNhanSelectAll();
+            return dt;
         }
 
-        public static bool InsertNewBenhNhan(string myConnectionString, BenhNhan obj)
+        public DataTable BenhNhanSelectByFlag()
         {
-            var myDal = new BenhNhanDAL();
-            var number = myDal.fnDoInsertBenhNhan(myConnectionString, obj);
-            if (number == 1)
+            var bnDAL = new BenhNhanDAL();
+            var dt = new DataTable();
+            dt = bnDAL.BenhNhanSelectByFlag();
+            return dt;
+        }
+
+        public bool BenhNhanInsert(BenhNhanEntity bn)
+        {
+            var bnDAL = new BenhNhanDAL();
+            var i = bnDAL.BenhNhanInsert(bn);
+            if (i == 1)
                 return true;
             else
                 return false;
+        }
+
+        public bool BenhNhanUpDate(BenhNhanEntity bn)
+        {
+            var bnDAL = new BenhNhanDAL();
+            var i = bnDAL.BenhNhanUpDate(bn);
+            if (i == 1)
+                return true;
+            else
+                return false;
+        }
+
+        public DataTable BenhNhanSelectByID(string id)
+        {
+            var bnDAL = new BenhNhanDAL();
+            var dt = new DataTable();
+            dt = bnDAL.BenhNhanSelectByID(id);
+            return dt;
+        }
+
+        public DataTable BenhNhanSearch(BenhNhanEntity bn)
+        {
+            var bnDAL = new BenhNhanDAL();
+            var dt = new DataTable();
+            dt = bnDAL.BenhNhanSearch(bn);
+            return dt;
+        }
+
+        public DataTable BenhNhanSearch1(BenhNhanEntity bn)
+        {
+            var bnDAL = new BenhNhanDAL();
+            var dt = new DataTable();
+            dt = bnDAL.BenhNhanSearch1(bn);
+            return dt;
         }
     }
 }

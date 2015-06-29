@@ -3,71 +3,81 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlTypes;
 using System.Data;
+using System.Data.SqlClient;
 using Entity;
 
 namespace DAL
 {
     public class BenhNhanDAL
     {
-        public DataTable fnGetBenhNhanList(string myConnectionString)
+        ConnectionDB ConnectionDB = new ConnectionDB();
+        public DataTable BenhNhanSelectAll()
         {
-            var conn = new ConnectionDB(myConnectionString);
-            var myTable = new DataTable();
-            try
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try 
             {
-                conn.CallStoredProcedureFromDB("spBenhNhanList");
-                conn.Reader = conn.Command.ExecuteReader();               
-                myTable.Columns.Add("MaBenhNhan", typeof(string));
-                myTable.Columns.Add("TenBenhNhan", typeof(string));
-                myTable.Columns.Add("CMND", typeof(string));
-                myTable.Columns.Add("NgaySinh", typeof(string));
-                myTable.Columns.Add("DiaChi", typeof(string));
-                myTable.Columns.Add("SDT", typeof(string));
-                myTable.Columns.Add("MaPhongKham", typeof(string));
-                myTable.AcceptChanges();
-                while (conn.Reader.Read())
-                {
-                    myTable.Rows.Add(new[]
-                                     {
-                                         conn.Reader["MaBenhNhan"].ToString(),
-                                         conn.Reader["TenBenhNhan"].ToString(),
-                                         conn.Reader["CMND"].ToString(),
-                                         conn.Reader["NgaySinh"].ToString(),
-                                         conn.Reader["DiaChi"].ToString(),
-                                         conn.Reader["SDT"].ToString(),
-                                         conn.Reader["MaPhongKham"].ToString()
-                                     });
-                }                
-                return myTable;
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanSelectAll", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
             }
-            catch
+            catch 
             {
                 return null;
                 throw;
             }
             finally
             {
-                conn.Connection.Close();
+                conn.Close();
             }
         }
 
-        public int fnDoInsertBenhNhan(string _strConn, BenhNhan bn)
+        public DataTable BenhNhanSelectByFlag()
         {
-            var conn = new ConnectionDB(_strConn);
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try 
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanSelectByFlag", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch 
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public int BenhNhanInsert(BenhNhanEntity bn)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
             int i = 0;
             try
             {
-                conn.CallStoredProcedureFromDB("spBenhNhanInsert");
-                conn.Command.Parameters.AddWithValue("@MaBenhNhan", bn.MaBenhNhan);
-                conn.Command.Parameters.AddWithValue("@TenBenhNhan", bn.TenBenhNhan);
-                conn.Command.Parameters.AddWithValue("@CMND", bn.CMND);
-                conn.Command.Parameters.AddWithValue("@NgaySinh", bn.NgaySinh);
-                conn.Command.Parameters.AddWithValue("@DiaChi", bn.DiaChi);
-                conn.Command.Parameters.AddWithValue("@SDT", bn.SDT);
-                conn.Command.Parameters.AddWithValue("@MaPhongKham", bn.MaPhongKham);               
-                conn.Reader = conn.Command.ExecuteReader();
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanInsert", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", bn.MaBenhNhan));
+                cmd.Parameters.Add(new SqlParameter("@TenBenhNhan", bn.TenBenhNhan));
+                cmd.Parameters.Add(new SqlParameter("@CMND", bn.CMND));
+                cmd.Parameters.Add(new SqlParameter("@NgaySinh", bn.NgaySinh));
+                cmd.Parameters.Add(new SqlParameter("@DiaChi", bn.DiaChi));
+                cmd.Parameters.Add(new SqlParameter("@SDT", bn.SDT));
+                cmd.Parameters.Add(new SqlParameter("@GioiTinh", bn.GioiTinh));
+                cmd.Parameters.Add(new SqlParameter("@MaPhongKham", bn.MaPhongKham));
+                cmd.ExecuteNonQuery();
                 i = 1;
             }
             catch
@@ -77,10 +87,116 @@ namespace DAL
             }
             finally
             {
-                conn.Connection.Close();
+                conn.Close();
+            }
+            return i;
+        }
+        public int BenhNhanUpDate(BenhNhanEntity bn)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            int i = 0;
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanUpDate", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", bn.MaBenhNhan));
+                cmd.Parameters.Add(new SqlParameter("@TenBenhNhan", bn.TenBenhNhan));
+                cmd.Parameters.Add(new SqlParameter("@CMND", bn.CMND));
+                cmd.Parameters.Add(new SqlParameter("@NgaySinh", bn.NgaySinh));
+                cmd.Parameters.Add(new SqlParameter("@DiaChi", bn.DiaChi));
+                cmd.Parameters.Add(new SqlParameter("@SDT", bn.SDT));
+                cmd.Parameters.Add(new SqlParameter("@GioiTinh", bn.GioiTinh));
+                cmd.Parameters.Add(new SqlParameter("@MaPhongKham", bn.MaPhongKham));
+                cmd.ExecuteNonQuery();
+                i = 1;
+            }
+            catch
+            {
+                i = 0;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
             }
             return i;
         }
 
+        public DataTable BenhNhanSearch(BenhNhanEntity bn)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanSearch", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@temp", bn.TenBenhNhan));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable BenhNhanSelectByID(string id)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanSelectByID", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", id));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable BenhNhanSearch1(BenhNhanEntity bn)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("BenhNhanSearch1", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@temp", bn.TenBenhNhan));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        
     }
 }
