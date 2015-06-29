@@ -223,7 +223,7 @@
             this.ribbonControl.QuickToolbarItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.office2007StartButton1,
             this.qatCustomizeItem1});
-            this.ribbonControl.Size = new System.Drawing.Size(1066, 142);
+            this.ribbonControl.Size = new System.Drawing.Size(1094, 142);
             this.ribbonControl.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.ribbonControl.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.ribbonControl.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -252,7 +252,7 @@
             this.ribbonPanel1.Location = new System.Drawing.Point(0, 26);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1066, 114);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1094, 114);
             // 
             // 
             // 
@@ -648,7 +648,7 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.tabControl.SelectedTabIndex = 4;
-            this.tabControl.Size = new System.Drawing.Size(1066, 614);
+            this.tabControl.Size = new System.Drawing.Size(1094, 614);
             this.tabControl.Style = DevComponents.DotNetBar.eTabStripStyle.Office2007Document;
             this.tabControl.TabIndex = 1;
             this.tabControl.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
@@ -675,7 +675,7 @@
             this.tabControlPanel3.Location = new System.Drawing.Point(0, 22);
             this.tabControlPanel3.Name = "tabControlPanel3";
             this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(1066, 592);
+            this.tabControlPanel3.Size = new System.Drawing.Size(1094, 592);
             this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -776,6 +776,7 @@
             this.btnKetQuaCLS.Size = new System.Drawing.Size(113, 58);
             this.btnKetQuaCLS.TabIndex = 2;
             this.btnKetQuaCLS.Text = "Nhập kết quả CLS";
+            this.btnKetQuaCLS.Click += new System.EventHandler(this.btnKetQuaCLS_Click);
             // 
             // txtSearchCLS
             // 
@@ -794,6 +795,7 @@
             // 
             // grvCLS
             // 
+            this.grvCLS.AllowUserToAddRows = false;
             this.grvCLS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -824,6 +826,8 @@
             this.grvCLS.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.grvCLS.Location = new System.Drawing.Point(9, 167);
             this.grvCLS.Name = "grvCLS";
+            this.grvCLS.RowHeadersVisible = false;
+            this.grvCLS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvCLS.Size = new System.Drawing.Size(762, 326);
             this.grvCLS.TabIndex = 0;
             // 
@@ -909,7 +913,7 @@
             this.tabControlPanel1.Location = new System.Drawing.Point(0, 22);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(1066, 592);
+            this.tabControlPanel1.Size = new System.Drawing.Size(1094, 592);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1284,7 +1288,7 @@
             this.dgvBenhNhan.Location = new System.Drawing.Point(1, 365);
             this.dgvBenhNhan.MultiSelect = false;
             this.dgvBenhNhan.Name = "dgvBenhNhan";
-            this.dgvBenhNhan.Size = new System.Drawing.Size(1064, 226);
+            this.dgvBenhNhan.Size = new System.Drawing.Size(1092, 226);
             this.dgvBenhNhan.TabIndex = 47;
             // 
             // dataGridViewTextBoxColumn1
@@ -1355,7 +1359,7 @@
             this.tabControlPanel6.Location = new System.Drawing.Point(0, 22);
             this.tabControlPanel6.Name = "tabControlPanel6";
             this.tabControlPanel6.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel6.Size = new System.Drawing.Size(1066, 592);
+            this.tabControlPanel6.Size = new System.Drawing.Size(1094, 592);
             this.tabControlPanel6.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel6.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1542,7 +1546,7 @@
             this.tabControlPanel4.Location = new System.Drawing.Point(0, 22);
             this.tabControlPanel4.Name = "tabControlPanel4";
             this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel4.Size = new System.Drawing.Size(1066, 592);
+            this.tabControlPanel4.Size = new System.Drawing.Size(1094, 592);
             this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -1873,7 +1877,7 @@
             this.tabControlPanel2.Location = new System.Drawing.Point(0, 22);
             this.tabControlPanel2.Name = "tabControlPanel2";
             this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(1066, 592);
+            this.tabControlPanel2.Size = new System.Drawing.Size(1094, 592);
             this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(254)))));
             this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
             this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -2104,7 +2108,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1066, 756);
+            this.ClientSize = new System.Drawing.Size(1094, 756);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.ribbonControl);
             this.DoubleBuffered = true;

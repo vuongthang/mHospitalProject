@@ -152,6 +152,14 @@ namespace mHospital
             }
         }
 
+        private void btnKetQuaCLS_Click(object sender, EventArgs e)
+        {
+            int index = grvCLS.SelectedRows[0].Index;
+            string maCLS = grvCLS.Rows[index].Cells["maCLS"].Value.ToString();
+            frmKetQuaCLS frm = new frmKetQuaCLS(maCLS);
+            frm.ShowDialog();
+        }
+
         #endregion
 
         #region Form Events
@@ -282,6 +290,8 @@ namespace mHospital
         }
 
         #endregion
+
+        
 
         
     }

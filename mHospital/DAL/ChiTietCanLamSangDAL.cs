@@ -56,6 +56,28 @@ namespace DAL
             catch { return false; }
             return true;
         }
+        //
+        public bool ChiTietCanLamSangUpDate(ChiTietCanLamSangEntites obj)
+        {
+            try
+            {
+                SqlConnection conn = ConnectionDB.GetConnect();
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("ChiTietCanLamSangUpDate", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaChiTietCanLamSang", obj.MaChiTietCanLamSang));
+                cmd.Parameters.Add(new SqlParameter("@ThoiGianLayMau", obj.ThoiGianLayMau));
+                cmd.Parameters.Add(new SqlParameter("@ThoiGianTraKQ", obj.ThoiGianTraKQ));
+                cmd.Parameters.Add(new SqlParameter("@BacSiThucHien", obj.BacSiThucHien));
+                cmd.Parameters.Add(new SqlParameter("@KetQuaCLS", obj.KetQuaCLS));
+                cmd.Parameters.Add(new SqlParameter("@NhanVienNhapLieu", obj.NhanVienNhapLieu));
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch { return false; }
+            return true;
+        }
 
         public bool ChiDinhCLSDelete(string Ma)
         {
@@ -121,6 +143,81 @@ namespace DAL
                 conn.Close();
             }
         }
+
+        public DataTable KetQuaCLSSelectAll()
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("KetQuaCLSSelectAll", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable KetQuaCLSSelectByID(string id)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("KetQuaCLSSelectByID", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaCLS", id));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public DataTable LoadCLS(string id)
+        {
+            SqlConnection conn = ConnectionDB.GetConnect();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("LoadCLS", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@MaBenhNhan", id));
+                SqlDataAdapter adap = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adap.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+                throw;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public DataTable CanLamSangSelectByFlag(string flag)
         {
             SqlConnection conn = ConnectionDB.GetConnect();

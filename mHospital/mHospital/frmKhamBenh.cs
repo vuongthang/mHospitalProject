@@ -34,6 +34,7 @@ namespace mHospital
         private void frmKhamBenh_Load(object sender, EventArgs e)
         {
             LoadLabel();
+            LoadGridCLS();
         }
 
         void LoadLabel()
@@ -59,6 +60,12 @@ namespace mHospital
             dtNgayKham.Value = DateTime.Parse(kb.KhamBenhSelectByIdBN(maBN).Rows[0]["NgayKham"].ToString());
         }
 
+        void LoadGridCLS()
+        {
+            ChiTietCanLamSangBLL bll = new ChiTietCanLamSangBLL();
+            dgvDvCLS.DataSource = bll.LoadCLS(maBN);
+        }
+
         KhamBenhEntity NewKhamBenh()
         {
             KhamBenhEntity obj = new KhamBenhEntity();
@@ -74,7 +81,9 @@ namespace mHospital
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (kb.KT_MaBenhNhan(lblMaBN.Text, txtMaKhamBenh.Text))
+            string bn = lblMaBN.Text;
+            string maKH = txtMaKhamBenh.Text;
+            if (kb.KT_MaBenhNhan(bn, maKH))
             {
                 if (kb.KhamBenhUpDate(NewKhamBenh()))
                 {
@@ -110,6 +119,19 @@ namespace mHospital
             string MaBN = lblMaBN.Text;
             frmChiDinhCLS frm = new frmChiDinhCLS(MaBN);
             frm.ShowDialog();
+        }
+
+        private void dgvDvCLS_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = dgvDvCLS.SelectedRows[0].Index;
+            string maCLS = dgvDvCLS.Rows[index].Cells["clmMaCLS"].Value.ToString();
+            frmChiTietKetQuaCLS frm = new frmChiTietKetQuaCLS(maCLS);
+            frm.ShowDialog();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            LoadGridCLS();
         }
     }
 }

@@ -28,6 +28,14 @@ namespace BLL
             return false;
         }
 
+        public bool ChiTietCanLamSangUpDate(ChiTietCanLamSangEntites obj)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            if (dal.ChiTietCanLamSangUpDate(obj))
+                return true;
+            return false;
+        }
+
         public bool ChiDinhCLSDelete(string Ma)
         {
             var dal = new ChiTietCanLamSangDAL();
@@ -52,6 +60,22 @@ namespace BLL
             return dt;
         }
 
+        public DataTable KetQuaCLSSelectAll()
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.KetQuaCLSSelectAll();
+            return dt;
+        }
+
+        public DataTable KetQuaCLSSelectByID(string id)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.KetQuaCLSSelectByID(id);
+            return dt;
+        }
+
         public DataTable CanLamSangSelectByFlag(string flag)
         {
             var dal = new ChiTietCanLamSangDAL();
@@ -65,6 +89,14 @@ namespace BLL
             var dal = new ChiTietCanLamSangDAL();
             var dt = new DataTable();
             dt = dal.CanLamSangSearch(temp);
+            return dt;
+        }
+
+        public DataTable LoadCLS(string id)
+        {
+            var dal = new ChiTietCanLamSangDAL();
+            var dt = new DataTable();
+            dt = dal.LoadCLS(id);
             return dt;
         }
 
