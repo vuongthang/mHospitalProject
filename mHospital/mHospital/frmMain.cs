@@ -245,8 +245,8 @@ namespace mHospital
         }
 
         private void btnQLThuoc_Click(object sender, EventArgs e)
-        {
-            //Todo - Load du lieu vao gridview
+        {           
+            LoadGridThuoc();
             if (KiemTraTenTabConTrol("tabThuoc") == false)
             {
                 tabControl.Tabs.Add(tabThuoc);
@@ -291,8 +291,61 @@ namespace mHospital
 
         #endregion
 
-        
+        #region Thông Tin Thuốc
 
-        
+        ThuocBLL t = new ThuocBLL();
+        void LoadGridThuoc()
+        {
+            grvThuoc.DataSource = t.ThuocSelectAll();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+           // ThuocEntites obj = new ThuocEntites();
+            string a = txtSearch.Text;
+           // obj.MaThuoc = txtSearch.Text;
+           //obj.TenThuoc = txtSearch.Text;
+          grvThuoc.DataSource = t.ThuocSearch(a);
+        }
+
+        ThuocEntites NewThuoc()
+        {
+            ThuocEntites obj = new ThuocEntites();
+            obj.MaThuoc = txtMaThuoc.Text;
+            obj.TenThuoc = txtTenThuoc.Text;
+            obj.SoLuong = txtSoLuong.Text;
+            obj.HanSuDung = dtHSD.Text;
+            obj.CachSuDung = txtCachSD.Text;
+            obj.GiaThuoc = Convert.ToInt32(txtGia.Text);
+            return obj;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (t.ThuocInsert(NewThuoc()))
+            {
+                MessageBox.Show("Thêm thành công!");
+                LoadGridThuoc();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi không thể thêm thuốc!");
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (t.ThuocUpdate(NewThuoc()))
+            {
+                MessageBox.Show("Sửa thành công!");
+                LoadGridThuoc();
+            }
+            else
+            {
+                MessageBox.Show("Lỗi không thể sửa thông tin thuốc!");
+            }
+        }
+
+        #endregion
     }
 }

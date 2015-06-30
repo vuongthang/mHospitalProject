@@ -27,5 +27,37 @@ namespace BLL
             dt = t.ThuocSelectMaThuoc(temp);
             return dt;
         }
+
+        public DataTable ThuocSelectAll()
+        {
+            var dal = new ThuocDAL();
+            var dt = new DataTable();
+            dt = dal.ThuocSelectAll();
+            return dt;
+        }
+
+        public DataTable ThuocSearch(string t)
+        {
+            var dal = new ThuocDAL();
+            var dt = new DataTable();
+            dt = dal.ThuocSearch(t);
+            return dt;
+        }
+
+        public bool ThuocInsert(ThuocEntites obj)
+        {
+            var dal = new ThuocDAL();
+            if (dal.ThuocInsert(obj))
+                return true;
+            return false;
+        }
+
+        public bool ThuocUpdate(ThuocEntites obj)
+        {
+            var dal = new ThuocDAL();
+            if (dal.ThuocUpDate(obj))
+                return true;
+            return false;
+        }
     }
 }

@@ -88,7 +88,7 @@ namespace mHospital
             }
             else
             {
-                MessageBox.Show("Lỗi không thể thêm bệnh nhân!");
+                MessageBox.Show("Lỗi không thể sửa thông tin bệnh nhân!");
             }
         }
 

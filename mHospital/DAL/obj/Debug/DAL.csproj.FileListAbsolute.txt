@@ -12,3 +12,10 @@ C:\Users\Thang\Desktop\Project\mHospital\DAL\bin\Debug\Entity.pdb
 C:\Users\Thang\Desktop\Project\mHospital\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Thang\Desktop\Project\mHospital\DAL\obj\Debug\DAL.dll
 C:\Users\Thang\Desktop\Project\mHospital\DAL\obj\Debug\DAL.pdb
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\bin\Debug\DAL.dll
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\bin\Debug\DAL.pdb
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\bin\Debug\Entity.dll
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\bin\Debug\Entity.pdb
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\obj\Debug\DAL.dll
+C:\Users\ElKing\Desktop\QLBV\mHospitalProject\mHospital\DAL\obj\Debug\DAL.pdb
